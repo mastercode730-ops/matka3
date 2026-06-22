@@ -68,7 +68,7 @@ export default function ResultTable() {
           <p className="bg-white text-black font-bold text-[20px] mt-1 mb-2">With palat</p>
           <p className="text-black font-bold text-[16px]">सिंगल जोड़ी लिए टेलीग्राम ज्वाइन करे</p>
           <p className="text-[#4cea5e] font-bold text-[16px] mb-2">👇👇</p>
-          <a href="#" className="bg-[#0088CC] text-white font-bold text-[1em] rounded-[5px] px-2 py-1 inline-block mb-2">Telegram Now</a>
+          <a href="https://wa.me/917589045547" target="_blank" rel="noopener noreferrer" className="bg-[#0088CC] text-white font-bold text-[1em] rounded-[5px] px-2 py-1 inline-block mb-2">Telegram Now</a>
         </div>
 
         {/* Warning Section */}

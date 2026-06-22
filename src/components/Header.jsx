@@ -11,15 +11,15 @@ export default function Header() {
       
       <div className="bg-[#aaa] border-[4px] border-[#1b3978] p-2.5 flex justify-center flex-wrap gap-1">
         <NavLink href="/">Home</NavLink>
-        <NavLink href="#">Guessing Forum</NavLink>
-        <NavLink href="#">Satta Chart 2024</NavLink>
-        <NavLink href="#">Satta King</NavLink>
+        <NavLink href="https://wa.me/917589045547">Guessing Forum</NavLink>
+        <NavLink href="https://wa.me/917589045547">Satta Chart 2024</NavLink>
+        <NavLink href="https://wa.me/917589045547">Satta King</NavLink>
       </div>
       
       <div className="bg-[#aaa] border-[4px] border-[#1b3978] border-t-0 p-2.5 flex justify-center flex-wrap gap-1 mb-2">
-        <NavLink href="#">Register</NavLink>
-        <NavLink href="#">Login</NavLink>
-        <NavLink href="#">Old Satta Chart</NavLink>
+        <NavLink href="https://wa.me/917589045547">Register</NavLink>
+        <NavLink href="https://wa.me/917589045547">Login</NavLink>
+        <NavLink href="https://wa.me/917589045547">Old Satta Chart</NavLink>
       </div>
 
       <div className="bg-gradient-to-br from-[#1e3c72] to-[#2a5298] border border-[#222] border-b-[4px] border-b-[#d8043c] p-2 mt-1">
@@ -35,7 +35,7 @@ export default function Header() {
       <div className="bg-gradient-to-b from-[#1e3c72] to-white font-bold border-double border-[6px] border-green-600 p-2 rounded-xl text-center m-1 mt-2">
         <p className="text-black text-sm m-0">सबसे पहले रिजल्ट देख ने के लिए ज्वाइन ग्रुप</p>
         <p className="text-blue-700 text-lg my-1">✈️🇫𝐀𝐒𝐓 🇰𝐇𝐀𝐁𝐀𝐑 ✈️</p>
-        <a href="#" className="inline-block mt-1">
+        <a href="https://wa.me/917589045547" target="_blank" rel="noopener noreferrer" className="inline-block mt-1">
           <button className="bg-[#32CD32] text-yellow-300 border-double border-[6px] border-red-600 rounded-[20px] px-4 py-2 text-lg font-bold shadow-lg transform transition hover:scale-105">
             <span className="text-white">📳JOIN GROUP NOW 📳</span>
           </button>

@@ -19,7 +19,7 @@ function App() {
       </div>
 
       {/* Floating Icons */}
-      <a href="#" className="fixed bottom-[280px] left-[2px] z-10 block transition-transform hover:scale-110">
+      <a href="https://wa.me/917589045547" target="_blank" rel="noopener noreferrer" className="fixed bottom-[280px] left-[2px] z-10 block transition-transform hover:scale-110">
         <img src="https://upload.wikimedia.org/wikipedia/commons/8/82/Telegram_logo.svg" alt="Telegram" className="h-[60px]" />
       </a>
       

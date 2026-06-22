@@ -11,7 +11,7 @@ export default function NoticeBoard() {
           अगर आप खुद का बाजार चलते हैं ….और अपने बाजार का रिजल्ट हमारी वेबसाइट पर डलवाना चाहते हैं..तो आज ही हमसे संपर्क करें :-
         </p>
         <div className="text-center mt-2">
-          <a href="#">
+          <a href="https://wa.me/917589045547" target="_blank" rel="noopener noreferrer">
             <button type="button" className="bg-green-600 text-black px-4 py-2 rounded-md font-bold cursor-pointer hover:bg-green-500 transition-colors">
               Message
             </button>

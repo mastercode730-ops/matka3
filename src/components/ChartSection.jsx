@@ -71,7 +71,7 @@ export default function ChartSection() {
           <div className="flex flex-col gap-[2px]">
             {gameNames.map(game => (
               <div key={game} className="bg-black p-2 border-b-4 border-[#d8043c] border border-[#222] bg-gradient-to-br from-[#1e3c72] to-[#2a5298]">
-                <a href="#" className="text-white text-[16px] font-bold uppercase no-underline hover:text-gray-200 block text-left">
+                <a href="https://wa.me/917589045547" className="text-white text-[16px] font-bold uppercase no-underline hover:text-gray-200 block text-left">
                   {game} RECORD CHART {year}
                 </a>
               </div>
