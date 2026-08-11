@@ -1,48 +1,431 @@
-@import "tailwindcss";
+/* ════════════════════════════════════════════════════════
+   SATTA'S TODAY — Matka Satta Today (inspired by sattastoday.com)
+   Deep Navy Blue × Electric Blue & Gold × Live Result Ledger
+   ════════════════════════════════════════════════════════ */
 
-@theme {
-  --color-primary: #1e3c72;
-  --color-secondary: #2a5298;
-  --color-accent: #d8043c;
-  --color-accent-hover: #c32025;
-  --color-gold: gold;
-  --color-bg-main: #000;
-  --color-bg-panel: #444;
-  --color-bg-dark: #333;
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700;800;900&family=Share+Tech+Mono&display=swap');
+
+:root {
+  --navy-1:  #080e1a;
+  --navy-2:  #0f172a;
+  --navy-3:  #1e293b;
+  --blue:    #2563eb;
+  --blue-lt: #38bdf8;
+  --gold:    #f59e0b;
+  --text:    #f8fafc;
+  --dim:     #94a3b8;
+  --wa:      #25d366;
+  --wa-dark: #16a34a;
+
+  --font-main: 'Outfit', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  --font-mono: 'Share Tech Mono', monospace;
+}
+
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
 }
 
 body {
-  background: #f3f4f6;
-  font-family: Verdana, Geneva, sans-serif;
-  font-size: 12px;
-  color: #ddd;
-  margin: 0px auto;
-}
-
-.text-shadow-red {
-  text-shadow: 2px 2px 1px #c00;
-}
-
-.text-shadow-dark {
-  text-shadow: 2px 2px 2px #555;
-}
-
-.content-wrapper {
-  max-width: 900px;
-  width: 100%;
-  overflow-x: hidden;
-  background: #000;
-  margin: auto;
-  box-shadow: 0px 13px 13px 0px rgba(0,0,0);
+  background: var(--navy-1);
+  background-image: radial-gradient(circle at 50% 0%, #1e3a8a 0%, var(--navy-1) 70%);
+  background-attachment: fixed;
+  color: var(--text);
+  font-family: var(--font-main);
+  font-size: 15px;
+  line-height: 1.6;
   min-height: 100vh;
+  padding-bottom: 70px;
 }
 
-@keyframes blink {
-  0% { opacity: 1; }
-  50% { opacity: 0; }
-  100% { opacity: 1; }
+a {
+  color: var(--blue-lt);
+  text-decoration: none;
 }
 
-.blink-animation {
-  animation: blink 1s infinite;
+.wrap {
+  max-width: 980px;
+  margin: 0 auto;
+  padding: 0 16px;
+}
+
+/* ── Live Spinner ───────────────────────────────────────── */
+.wait-spinner {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--gold);
+  animation: pulseWait 1.5s ease-in-out infinite;
+}
+
+.clock-hand {
+  transform-origin: 12px 12px;
+  animation: spinClock 2.8s linear infinite;
+}
+
+@keyframes spinClock {
+  to { transform: rotate(360deg); }
+}
+
+@keyframes pulseWait {
+  0%, 100% { opacity: 1; transform: scale(1); }
+  50% { opacity: 0.6; transform: scale(0.92); }
+}
+
+/* ── WhatsApp CTAs ──────────────────────────────────────── */
+.btn-wa-today {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 8px 18px;
+  background: linear-gradient(135deg, var(--wa), var(--wa-dark));
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  border-radius: 999px;
+  color: #ffffff !important;
+  font-family: var(--font-main);
+  font-size: 13px;
+  font-weight: 800;
+  text-decoration: none;
+  box-shadow: 0 4px 16px rgba(37, 211, 102, 0.4);
+  transition: transform 0.2s ease;
+}
+
+.btn-wa-today:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 22px rgba(37, 211, 102, 0.7);
+}
+
+.wa-today-banner {
+  margin: 18px 0;
+  padding: 16px 20px;
+  background: linear-gradient(135deg, #0f172a 0%, #1e3a8a 50%, #15803d 100%);
+  border: 2px solid var(--blue-lt);
+  border-radius: 14px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  flex-wrap: wrap;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.5);
+}
+
+.wa-today-title {
+  font-size: 16px;
+  font-weight: 900;
+  color: #ffffff;
+}
+
+.wa-today-sub {
+  font-size: 13px;
+  color: #bae6fd;
+  margin-top: 2px;
+}
+
+.floating-wa {
+  position: fixed;
+  bottom: 20px;
+  left: 20px;
+  z-index: 50;
+}
+
+.today-fab-wa {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 12px 22px;
+  background: linear-gradient(135deg, var(--wa), var(--wa-dark));
+  border: 2px solid #ffffff;
+  border-radius: 999px;
+  color: #ffffff !important;
+  font-family: var(--font-main);
+  font-size: 14px;
+  font-weight: 800;
+  cursor: pointer;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.6);
+  animation: pulseWa 2s infinite;
+  text-decoration: none;
+}
+
+@keyframes pulseWa {
+  0%, 100% { box-shadow: 0 0 12px rgba(37, 211, 102, 0.5); }
+  50% { box-shadow: 0 0 24px rgba(37, 211, 102, 0.85); }
+}
+
+/* ── Breaking Flash Bar ─────────────────────────────────── */
+.lrs {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  gap: 8px 14px;
+  padding: 10px 16px;
+  background: linear-gradient(135deg, #1e3a8a 0%, #2563eb 50%, #1e3a8a 100%);
+  border-bottom: 3px solid var(--gold);
+  color: #ffffff;
+  text-align: center;
+}
+
+.lrs-tag {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 3px 10px;
+  background: rgba(0, 0, 0, 0.35);
+  border-radius: 999px;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+}
+
+.lrs-dot {
+  width: 8px;
+  height: 8px;
+  background: #43e660;
+  border-radius: 50%;
+  box-shadow: 0 0 8px #43e660;
+  animation: lrsBlink 1.2s infinite;
+}
+
+@keyframes lrsBlink {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.25; }
+}
+
+.lrs-game {
+  font-size: 17px;
+  font-weight: 800;
+}
+
+.lrs-time {
+  color: #fde047;
+  font-size: 13px;
+}
+
+.lrs-num {
+  padding: 3px 16px;
+  background: var(--gold);
+  border-radius: 8px;
+  color: #0f172a;
+  font-size: 24px;
+  font-weight: 900;
+}
+
+/* ── Header ─────────────────────────────────────────────── */
+.header-today {
+  text-align: center;
+  padding: 24px 16px 14px;
+  border-bottom: 2px solid rgba(255, 255, 255, 0.15);
+  background: rgba(15, 23, 42, 0.7);
+  backdrop-filter: blur(10px);
+}
+
+.header-today h1 {
+  font-size: 36px;
+  font-weight: 900;
+  letter-spacing: 1px;
+  color: #ffffff;
+}
+
+.header-today .sub {
+  color: var(--blue-lt);
+  font-size: 13px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin-top: 4px;
+}
+
+/* ── Hero Card ──────────────────────────────────────────── */
+.hero-card-today {
+  margin: 20px auto;
+  max-width: 620px;
+  padding: 24px 20px;
+  background: linear-gradient(135deg, #1e293b 0%, #0f172a 100%);
+  border: 2px solid var(--blue-lt);
+  border-radius: 16px;
+  text-align: center;
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.5);
+}
+
+.hero-chip-today {
+  display: inline-block;
+  padding: 4px 14px;
+  background: var(--blue);
+  border-radius: 999px;
+  font-size: 12px;
+  font-weight: 800;
+  letter-spacing: 1px;
+  color: #fff;
+  margin-bottom: 10px;
+}
+
+.hero-number-today {
+  margin: 6px 0 14px;
+  font-family: var(--font-mono);
+  font-size: 76px;
+  font-weight: 700;
+  line-height: 1;
+  color: var(--gold);
+  text-shadow: 0 0 20px rgba(245, 158, 11, 0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* ── Results Grid ───────────────────────────────────────── */
+.results-grid-today {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 14px;
+  margin-top: 16px;
+}
+
+.card-today {
+  background: var(--navy-3);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  border-radius: 12px;
+  padding: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  transition: transform 0.2s ease;
+}
+
+.card-today:hover {
+  transform: translateY(-2px);
+  border-color: var(--blue-lt);
+}
+
+.card-today-badge {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 52px;
+  height: 46px;
+  padding: 0 10px;
+  background: rgba(0, 0, 0, 0.4);
+  border: 2px solid var(--blue-lt);
+  border-radius: 8px;
+  font-family: var(--font-mono);
+  font-size: 24px;
+  font-weight: 900;
+  color: var(--blue-lt);
+}
+
+.card-today-badge.pending {
+  border-color: var(--gold);
+  color: var(--gold);
+  font-size: 16px;
+}
+
+/* ── Monthly Archive ────────────────────────────────────── */
+.archive-card-today {
+  background: var(--navy-2);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  border-radius: 14px;
+  padding: 18px;
+  margin: 24px 0 32px;
+  overflow-x: auto;
+}
+
+.table-today {
+  width: 100%;
+  border-collapse: collapse;
+  font-family: var(--font-mono);
+  font-size: 13px;
+  text-align: center;
+}
+
+.table-today th {
+  padding: 10px 8px;
+  background: rgba(37, 99, 235, 0.2);
+  border-bottom: 2px solid var(--blue-lt);
+  color: var(--blue-lt);
+  font-weight: 800;
+}
+
+.table-today td {
+  padding: 8px 6px;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.table-today td.has-num {
+  color: var(--gold);
+  font-weight: 800;
+  background: rgba(245, 158, 11, 0.06);
+}
+
+.table-today tr.today-row td {
+  background: rgba(37, 99, 235, 0.2);
+  color: #ffffff;
+}
+
+.today-nav-btns {
+  display: flex;
+  justify-content: center;
+  gap: 12px;
+  margin-top: 16px;
+  flex-wrap: wrap;
+}
+
+.today-btn {
+  padding: 8px 18px;
+  background: var(--navy-3);
+  border: 1px solid var(--blue-lt);
+  border-radius: 999px;
+  color: var(--blue-lt);
+  font-family: var(--font-main);
+  font-size: 13px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.today-btn:hover,
+.today-btn.active {
+  background: var(--blue);
+  color: #ffffff;
+}
+
+/* ── Footer ─────────────────────────────────────────────── */
+.footer-today {
+  text-align: center;
+  padding: 30px 0;
+  border-top: 1px solid rgba(255, 255, 255, 0.12);
+  margin-top: 40px;
+}
+
+.footer-today select {
+  padding: 8px 16px;
+  background: var(--navy-3);
+  border: 1px solid var(--blue-lt);
+  border-radius: 6px;
+  color: #fff;
+  font-family: var(--font-main);
+  font-size: 14px;
+  margin: 0 4px;
+}
+
+.floating-bar {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  z-index: 50;
+}
+
+.today-fab {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 12px 22px;
+  background: var(--blue);
+  border: none;
+  border-radius: 999px;
+  color: #ffffff;
+  font-family: var(--font-main);
+  font-size: 14px;
+  font-weight: 800;
+  cursor: pointer;
+  box-shadow: 0 4px 18px rgba(37, 99, 235, 0.5);
 }
