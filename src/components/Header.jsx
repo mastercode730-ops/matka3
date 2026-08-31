@@ -26,6 +26,19 @@ export default function Header() {
         <NavLink href="https://wa.me/918360750829">Old Satta Chart</NavLink>
       </div>
 
+      <div className="text-center my-2">
+        <a
+          href="https://www.Gabbar247.vip"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="inline-block"
+        >
+          <button className="bg-[#1e3c72] text-white border-double border-[4px] border-[#d8043c] rounded-[10px] px-6 py-2 text-xl font-bold shadow-lg transform transition hover:scale-105 hover:bg-[#d8043c]">
+            Login / Register Here
+          </button>
+        </a>
+      </div>
+
       <div className="bg-gradient-to-br from-[#1e3c72] to-[#2a5298] border border-[#222] border-b-[4px] border-b-[#d8043c] p-2 mt-1">
         <h1 className="text-white uppercase font-bold text-lg text-center m-0">
           SATTA KING
