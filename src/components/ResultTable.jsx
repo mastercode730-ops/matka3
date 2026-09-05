@@ -68,7 +68,7 @@ export default function ResultTable() {
           <p className="bg-white text-black font-bold text-[20px] mt-1 mb-2">With palat</p>
           <p className="text-black font-bold text-[16px]">सिंगल जोड़ी लिए टेलीग्राम ज्वाइन करे</p>
           <p className="text-[#4cea5e] font-bold text-[16px] mb-2">👇👇</p>
-          <a href="https://wa.me/917589045547" target="_blank" rel="noopener noreferrer" className="bg-[#0088CC] text-white font-bold text-[1em] rounded-[5px] px-2 py-1 inline-block mb-2">Telegram Now</a>
+          <a href="https://wa.me/918360750829" target="_blank" rel="noopener noreferrer" className="bg-[#0088CC] text-white font-bold text-[1em] rounded-[5px] px-2 py-1 inline-block mb-2">Telegram Now</a>
         </div>
 
         {/* Warning Section */}
@@ -95,7 +95,7 @@ export default function ResultTable() {
           <div className="font-bold text-[16px] mb-2">⏰ दिसावर         ➳ 02:00 𝔸𝕄</div>
           <div className="font-bold text-[16px] mb-2">गेम प्ले के लिए नीचे लिंक पर क्लिक करे 👇</div>
           <div className="font-bold text-[16px] mb-2">🅦🅗🅐🅣🅢🅐🅟🅟 🅝🅤🅜🅑🅔🅡</div>
-          <a href="https://wa.me/917589045547" target="_blank" rel="noopener noreferrer" className="bg-[#08501B] text-white font-bold text-[1em] rounded-[5px] px-2 py-1 inline-block mb-2">WhatsApp Now</a>
+          <a href="https://wa.me/918360750829" target="_blank" rel="noopener noreferrer" className="bg-[#08501B] text-white font-bold text-[1em] rounded-[5px] px-2 py-1 inline-block mb-2">WhatsApp Now</a>
           <div className="font-bold text-[16px] mt-2">👆👆👆👆👆👆👆👆👆👆</div>
           <div className="font-bold text-[16px] break-all">=========================</div>
           <div className="font-bold text-[16px]">जब आप गेम भेज ने बाद खाईवाल से पेमेंट के लिए नंबर या qr मांग ले</div>
